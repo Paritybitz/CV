@@ -1,0 +1,161 @@
+\documentclass[]{resume-openfont}
+
+\pagestyle{fancy}
+\resetHeaderAndFooter
+
+%--------------------------------------------------------------
+% Convenience command - make it easy to fill template
+
+% Create job position command. Parameters: company, position, location, when
+\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+
+% Create education heading. Parameters: Name, degree, location, when
+\newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
+\descript{#2}\fakeNewLine}
+
+% Create project heading. Parameters: Name, link, Tech stack
+\newcommand{\projectHeading}[3]{\Project{#1}{#2}
+\descript{#3}\\}
+
+\newcommand{\projectHeadingWithDate}[4]{\Project{#1}{#2}
+\descript{#3 | #4}\\}
+
+% Parameters: courses
+\newcommand{\courseWork}[1]{\textbf{Coursework:} #1}
+
+% Parameters: courses
+\newcommand{\teacherAssistant}[1]{\textbf{Teacher Assistant (TA):} #1}
+ 
+%--------------------------------------------------------------
+\begin{document}
+
+%--------------------------------------------------------------
+%     Profile
+%--------------------------------------------------------------
+\newcommand{\yourName}{Ali Mohsin}
+% How you want it to show up on the resume
+\newcommand{\yourWebsite}{webiste}
+% vs how you want it to show up. If it's the same you can just replace "\yourWebsiteLink" with "yourWebsite"
+\newcommand{\yourWebsiteLink}{website}
+\newcommand{\yourEmail}{ali.mohsin05@gmail.com}
+\newcommand{\yourPhone}{1-571-233-5190}
+\newcommand{\githubUserName}{Paritybitz}
+\newcommand{\linkedInUserName}{in/alimohsin05}
+
+% An alternate profile section 
+% \alignProfileTable
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%     \ralewayBold{\href{\yourWebsiteLink}{\Large \yourName}} & 
+%     Email : \href{mailto:\yourEmail}{\yourEmail}
+%     \\
+%     \href{https://github.com/\githubUserName}{GitHub://\githubUserName} & 
+%     Mobile : \yourPhone
+%     \\
+%     \href{https://www.linkedin.com/in/\linkedInUserName}{LinkedIn://\linkedInUserName} & Website : \href{\yourWebsiteLink}{\yourWebsite}
+%     \\
+% \end{tabular*}
+
+\begin{center}
+    \Huge \scshape \latoRegular{\yourName} \\ \vspace{1pt}
+    \small \href{mailto:\yourEmail}{\underline{\yourEmail}}  $|$  \yourPhone $|$ 
+    \href{https://www.linkedin.com/in/\linkedInUserName}{\underline{linkedIn/\linkedInUserName}} $|$
+    \href{https://github.com/\githubUserName}{\underline{github/\githubUserName}} 
+    % $|$ \href{\yourWebsiteLink}{\underline{\yourWebsite}}
+\end{center}
+
+%--------------------------------------------------------------
+%     Education
+%--------------------------------------------------------------
+\section{Education}
+% Put school first and degree second if your school is reputable
+\educationHeading{B.S, Applied Computer Science, \\ conc. Software Engineering, GPA: 3.6/4.0 (Dean’s List)}{George Mason University}{Fairfax, VA}{\textit{Expected Dec 2026}}
+
+% \teacherAssistant{World Wide Web Information Systems Development}
+\courseWork{(AP/DE Credits: 46) • Previous: Intro to CS (Python), Object-Oriented Programming (Python and Java), Statistics
+• Current: Data Structures, Formal Methods/Models, Software Usability Analysis/Design, Low-level Prog (C)}
+\sectionsep
+
+%--------------------------------------------------------------
+%     Experience
+%--------------------------------------------------------------
+\section{Work Experience}
+\resumeHeading{FiveRivers Technologies}{Data Scientist Intern}{Lahore, Pakistan}{May 2024 – Aug 2024}
+\begin{bullets}
+    \item Designed and implemented a dashboard using \textbf{React} and \textbf{TypeScript} to visualize data stored in \textbf{DynamoDB}, decreasing time to understand delivery driver work sessions by over 10 times.
+    %  \item Here is another bullet that I might choose to uncomment for some jobs
+    \item Ensured only authorized employees have access to the application by creating an \textbf{AWS Lambda@Edge} function to intercept and sign valid requests.
+    \item Devised and deployed the infrastructure in TypeScript through \textbf{AWS CDK}, then created efficient algorithms to process data from a custom \textbf{REST API}, so it could scale to handle millions of deliveries.
+    \item Setup a CI/CD pipeline and exceeded requirements in each stage, which lead to the application being pushed to production.
+\end{bullets}
+\sectionsep
+
+
+%--------------------------------------------------------------
+%     Projects
+%--------------------------------------------------------------
+\section{Projects}
+
+\projectHeading{Automated Spear-Phisher}{https://github.com/Aarif123456/Fb-Twitter-gui}{Python, PySpark, Selenium, Apache, NLP, Big Data}
+A security research tool to send targeted spam messages on either Facebook or Twitter. The program analyzes the feed of its target to increase the effectiveness of the messages.\\
+\sectionsep
+  
+\projectHeading{Image Repository}{https://github.com/Aarif123456/image\_repository}{Java, PHP, React, TypeScript, Maven, GCP, MySQL}
+A full-stack image repository, where users can store their files. Created a GCP cloud function to implement \href{https://www.cs.utexas.edu/~bwaters/publications/papers/cp-abe.pdf}{CP-ABE} encryption and used it to ensure files are secure at rest.\\
+\sectionsep
+
+\projectHeading{Image Repository}{https://github.com/Aarif123456/image\_repository}{Java, PHP, React, TypeScript, Maven, GCP, MySQL}
+A full-stack image repository, where users can store their files. Created a GCP cloud function to implement \href{https://www.cs.utexas.edu/~bwaters/publications/papers/cp-abe.pdf}{CP-ABE} encryption and used it to ensure files are secure at rest.\\
+\sectionsep
+
+% Example using bullets and dates 
+% \projectHeadingWithDate{Hogwart\textquotesingle{}s Library Management System}{https://github.com/Aarif123456/hogwartslibrary}{PHP, JavaScript, HTML, CSS, MySQL}{Aug 2019}
+% \begin{bullets}
+    % \item A full-stack library management system, where users can manage books and holds on their accounts. Users can search the library\textquotesingle{}s catalogue, which has every book mentioned in the Harry Potter series. The system distinguishes between 4 users. For examples, librarians who can also check or return books on behalf of users.\\
+% \end{bullets}
+% \sectionsep
+
+%--------------------------------------------------------------
+%     Volunteer Initiatives
+%--------------------------------------------------------------
+\section{Volunteer Initiatives}
+\resumeHeading{STEM Kids}{Lead Coach and Curriculum Creator}{Alexandria, VA}{June 2021 – Current}
+\begin{bullets}
+    \item Designed an engaging STEM curriculum to inspire kids aged 9-15 to explore robotics and programming.
+Introduced programming tools including Scratch, Lego Mindstorms, and Python.
+    %  \item Here is another bullet that I might choose to uncomment for some jobs
+    \item Developed and instructed a course to enhance public speaking and presentation design skills,
+emphasizing effective communication and leadership abilities.
+\end{bullets}
+\sectionsep
+
+%--------------------------------------------------------------
+%     Skills
+%--------------------------------------------------------------
+\section{Skills}
+\begin{skillList}
+    \singleItem{Languages:}{Java, C++, Python, C\#, PHP, Prolog, Bash, C, Racket, SQL}
+    \\
+    \singleItem{Web Development:}{React, JavaScript, TypeScript, HTML/CSS}
+    \\
+    \singleItem{Technology:}{Git, AWS, GCP, Azure, Docker, Unity, Apache, \LaTeX, MongoDB, DynamoDB, Neo4j}
+\end{skillList}
+
+\sectionsep
+
+\section{Interests/Activities}
+\begin{skillList}
+    \singleItem{\textbf{Interests:}}{Soccer, Weightlifting, Running, MMA, Photography (Instagram: art0grafy), Stock Trading}
+    \\
+    \singleItem{\textbf{Activities:}}{Travel Soccer Coach, Soccer Referee, Substitute Teacher, Athletic Trainer, Calculus Tutor}
+    \\
+\end{skillList}
+
+% A more concise alternate 
+% \begin{skillList}
+%     \doubleItem{Languages:}{Java, C++, Python, C\#, PHP, Prolog, Bash, C, Racket}%
+%     {Databases:}{SQL, MongoDB, Neo4j, DynamoDB}
+%     \\
+%     \doubleItem{Web Development:}{JavaScript, TypeScript, React, HTML/CSS}
+%     {Technology:}{Git, AWS, GCP, Azure, Docker, \LaTeX}%
+% \end{skillList}
+\end{document}
