@@ -12,3 +12,6 @@ prefers-color-scheme media query
 Accessibility
 - Use correct heading tags
 - screenreader-only text for card titles/username
+
+---------------
+Resume description
